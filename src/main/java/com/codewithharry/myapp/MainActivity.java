@@ -2,6 +2,7 @@ package com.codewithharry.myapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int mycount = 0;
-    Button btminus, btplus, btreset;
+    Button btminus, btplus, btreset, btcol1, btcol2, btcol3, btcol4, btcol5, btcol6;
     TextView txhead, txcou;
 
     @Override
@@ -23,6 +24,60 @@ public class MainActivity extends AppCompatActivity {
         btminus = findViewById(R.id.btminus);
         btplus = findViewById(R.id.btplus);
         btreset = findViewById(R.id.btreset);
+        btcol1 = findViewById(R.id.btcol1);
+        btcol2 = findViewById(R.id.btcol2);
+        btcol3 = findViewById(R.id.btcol3);
+        btcol4 = findViewById(R.id.btcol4);
+        btcol5 = findViewById(R.id.btcol5);
+        btcol6 = findViewById(R.id.btcol6);
+
+        btcol1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txcou.setTextColor(Color.parseColor("#ff0088"));
+            }
+        });
+
+        btcol2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txcou.setTextColor(Color.parseColor("#047745"));
+            }
+        });
+
+        btcol3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txcou.setTextColor(Color.parseColor("#0048FF"));
+            }
+        });
+
+        btcol4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txcou.setTextColor(Color.parseColor("#FF5722"));
+            }
+        });
+
+        btcol5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txcou.setTextColor(Color.parseColor("#FD6A7504"));
+            }
+        });
+
+        btcol6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txcou.setTextColor(Color.parseColor("#730219"));
+            }
+        });
+
+
+
+
+
+
         btminus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
                     txcou.setText(mycount + "");
                 }
 
-
-                
             }
         });
         btplus.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
             txcou.setText(mycount + "");
             }
         });
+
+
     }
 
 
