@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btcol4 = findViewById(R.id.btcol4);
         btcol5 = findViewById(R.id.btcol5);
         btcol6 = findViewById(R.id.btcol6);
-
+// Colors
         btcol1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,9 +72,6 @@ public class MainActivity extends AppCompatActivity {
                 txcou.setTextColor(Color.parseColor("#730219"));
             }
         });
-
-
-
 
 
 
